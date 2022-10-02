@@ -1,0 +1,15 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        first_name: Имя
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              blank: не может быть пустым
+    models:
+      user:
+        one: Пользователь
+        other: Пользователи

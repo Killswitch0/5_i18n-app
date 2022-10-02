@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+
+<div>
+  <%= link_to t('actions.edit'), edit_user_path(@user) %> |
+  <%= link_to t('common.back'), users_path %>
+
+
+  <%= button_to t('actions.destroy'), @user, method: :delete, form: {
+      data: { turbo_confirm: "#{t('actions.confirm')}" }
+  } %>
+</div>

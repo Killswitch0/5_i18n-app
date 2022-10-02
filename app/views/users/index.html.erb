@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<!--Также ключи можно писать вот так t('all', scope: 'users', default: 'All users') -->
+<h1><%= t('users.all') %></h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to t('actions.show'), user %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to t('users.new_user'), new_user_path %>
